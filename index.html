@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Trang Tập Viết Cho Học Sinh Lớp 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📝 Tạo Trang Tập Viết Lớp 1</h1>
+            <p>Phần mềm hỗ trợ giáo viên tạo mẫu tập viết cho học sinh</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Panel điều khiển -->
+            <aside class="control-panel">
+                <h2>⚙️ Cài đặt</h2>
+                
+                <div class="form-group">
+                    <label>Chọn chữ cái:</label>
+                    <select id="charSelect">
+                        <optgroup label="Chữ thường">
+                            <option value="a">a - chữ a thường</option>
+                            <option value="ă">ă - chữ ă thường</option>
+                            <option value="â">â - chữ â thường</option>
+                            <option value="b">b - chữ b thường</option>
+                            <option value="c">c - chữ c thường</option>
+                            <option value="d">d - chữ d thường</option>
+                            <option value="đ">đ - chữ đ thường</option>
+                            <option value="e">e - chữ e thường</option>
+                            <option value="ê">ê - chữ ê thường</option>
+                            <option value="g">g - chữ g thường</option>
+                            <option value="h">h - chữ h thường</option>
+                            <option value="i">i - chữ i thường</option>
+                            <option value="k">k - chữ k thường</option>
+                            <option value="l">l - chữ l thường</option>
+                            <option value="m">m - chữ m thường</option>
+                            <option value="n">n - chữ n thường</option>
+                            <option value="o">o - chữ o thường</option>
+                            <option value="ô">ô - chữ ô thường</option>
+                            <option value="ơ">ơ - chữ ơ thường</option>
+                            <option value="p">p - chữ p thường</option>
+                            <option value="q">q - chữ q thường</option>
+                            <option value="r">r - chữ r thường</option>
+                            <option value="s">s - chữ s thường</option>
+                            <option value="t">t - chữ t thường</option>
+                            <option value="u">u - chữ u thường</option>
+                            <option value="ư">ư - chữ ư thường</option>
+                            <option value="v">v - chữ v thường</option>
+                            <option value="x">x - chữ x thường</option>
+                            <option value="y">y - chữ y thường</option>
+                        </optgroup>
+                        <optgroup label="Chữ hoa">
+                            <option value="A">A - chữ A hoa</option>
+                            <option value="Ă">Ă - chữ Ă hoa</option>
+                            <option value="Â">Â - chữ Â hoa</option>
+                            <option value="B">B - chữ B hoa</option>
+                            <option value="C">C - chữ C hoa</option>
+                            <option value="D">D - chữ D hoa</option>
+                            <option value="Đ">Đ - chữ Đ hoa</option>
+                            <option value="E">E - chữ E hoa</option>
+                            <option value="Ê">Ê - chữ Ê hoa</option>
+                            <option value="G">G - chữ G hoa</option>
+                            <option value="H">H - chữ H hoa</option>
+                            <option value="I">I - chữ I hoa</option>
+                            <option value="K">K - chữ K hoa</option>
+                            <option value="L">L - chữ L hoa</option>
+                            <option value="M">M - chữ M hoa</option>
+                            <option value="N">N - chữ N hoa</option>
+                            <option value="O">O - chữ O hoa</option>
+                            <option value="Ô">Ô - chữ Ô hoa</option>
+                            <option value="Ơ">Ơ - chữ Ơ hoa</option>
+                            <option value="P">P - chữ P hoa</option>
+                            <option value="Q">Q - chữ Q hoa</option>
+                            <option value="R">R - chữ R hoa</option>
+                            <option value="S">S - chữ S hoa</option>
+                            <option value="T">T - chữ T hoa</option>
+                            <option value="U">U - chữ U hoa</option>
+                            <option value="Ư">Ư - chữ Ư hoa</option>
+                            <option value="V">V - chữ V hoa</option>
+                            <option value="X">X - chữ X hoa</option>
+                            <option value="Y">Y - chữ Y hoa</option>
+                        </optgroup>
+                        <optgroup label="Chữ số">
+                            <option value="0">0 - số không</option>
+                            <option value="1">1 - số một</option>
+                            <option value="2">2 - số hai</option>
+                            <option value="3">3 - số ba</option>
+                            <option value="4">4 - số bốn</option>
+                            <option value="5">5 - số năm</option>
+                            <option value="6">6 - số sáu</option>
+                            <option value="7">7 - số bảy</option>
+                            <option value="8">8 - số tám</option>
+                            <option value="9">9 - số chín</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Font chữ tập viết:</label>
+                    <select id="fontSelect">
+                        <option value="'Times New Roman', serif">Font mặc định (Times New Roman)</option>
+                        <option value="'Arial', sans-serif">Arial</option>
+                        <option value="'Courier New', monospace">Courier New</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Số chữ mẫu mỗi dòng:</label>
+                    <input type="number" id="sampleCount" value="3" min="1" max="10">
+                </div>
+
+                <div class="form-group">
+                    <label>Số dòng tập viết:</label>
+                    <input type="number" id="lineCount" value="10" min="1" max="20">
+                </div>
+
+                <div class="form-group">
+                    <label>Kích thước chữ (mm):</label>
+                    <input type="number" id="fontSize" value="15" min="10" max="30" step="1">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="showDots" checked>
+                        Hiện dấu chấm điểm đặt bút
+                    </label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="fadeChars" checked>
+                        Chữ mẫu nhạt dần theo dòng
+                    </label>
+                </div>
+
+                <button id="btnPreview" class="btn btn-primary">👁️ Xem trước</button>
+                <button id="btnPrint" class="btn btn-success">🖨️ In PDF</button>
+                <button id="btnReset" class="btn btn-warning">🔄 Làm mới</button>
+            </aside>
+
+            <!-- Khu vực preview -->
+            <main class="preview-panel">
+                <div class="page-a4" id="previewPage">
+                    <div class="empty-state">
+                        <p>👈 Chọn chữ cái và nhấn <strong>"Xem trước"</strong></p>
+                        <p>để tạo trang tập viết</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <p>💝</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
